@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: "BBM Dev | Soluciones Digitales",
+  title: "BBM | Soluciones Digitales",
   description:
     "Desarrollo de software, aplicaciones web y sistemas a la medida",
 }

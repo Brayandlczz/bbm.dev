@@ -5,11 +5,13 @@ type HeroBackground =
   | "glow"
   | "noise"
 
-const HERO_BG: HeroBackground = "liquid" 
+const HERO_BG: HeroBackground = "tech" 
 
-export default function Hero() {
+export default function Home() {
   return (
-    <section className={`relative min-h-screen flex items-center px-6 text-white ${getHeroBg(HERO_BG)}`}>
+    <section 
+      id="home"
+      className={`relative min-h-screen flex items-center px-6 text-white ${getHeroBg(HERO_BG)}`}>
       
       {/* Overlays especiales */}
       {HERO_BG === "noise" && (

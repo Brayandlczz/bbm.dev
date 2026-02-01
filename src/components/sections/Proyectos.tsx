@@ -1,6 +1,6 @@
 const projects = [
   {
-    name: "Plataforma Educativa",
+    name: " SIAFE | Sistema Integral de Administración Financiero-Educativa",
     description:
       "Sistema integral para la gestión académica, administrativa y financiera.",
   },
@@ -20,13 +20,13 @@ export default function Projects() {
   return (
     <section
       id="proyectos"
-      className="min-h-screen flex items-center px-6 bg-black"
+      className="min-h-screen px-6 bg-black pt-30"
     >
       <div className="max-w-7xl mx-auto w-full">
 
         {/* Header */}
-        <div className="mb-24 max-w-2xl">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+        <div className="mb-10 max-w-2xl">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Proyectos
           </h2>
           <p className="text-white/70 leading-relaxed">
@@ -64,7 +64,7 @@ export default function Projects() {
                 duration-300
                 group-hover:translate-x-2
               ">
-                <h3 className="text-3xl font-semibold text-white">
+                <h3 className="text-2xl font-semibold text-white">
                   {project.name}
                 </h3>
 
@@ -72,7 +72,7 @@ export default function Projects() {
                   {project.description}
                 </p>
 
-                <div className="mt-8">
+                <div className="mt-4">
                   <span
                     className="
                       inline-flex

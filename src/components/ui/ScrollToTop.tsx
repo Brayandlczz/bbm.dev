@@ -39,6 +39,7 @@ export default function ScrollToTop() {
         hover:bg-zinc-900 hover:text-white
         focus:outline-none focus:ring-2
         focus:ring-zinc-900 focus:ring-offset-2
+        cursor-pointer
       "
     >
       <ArrowUp

@@ -1,8 +1,8 @@
-import Hero from "@/src/components/sections/Hero"
-import Services from "@/src/components/sections/Services"
-import Projects from "@/src/components/sections/Projects"
+import Hero from "@/src/components/sections/Home"
+import Services from "@/src/components/sections/Servicios"
+import Projects from "@/src/components/sections/Proyectos"
 import About from "@/src/components/sections/About"
-import CTA from "@/src/components/sections/Cta"
+import CTA from "@/src/components/sections/Contacto"
 
 export default function HomePage() {
   return (
