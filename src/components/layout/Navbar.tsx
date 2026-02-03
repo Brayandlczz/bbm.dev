@@ -2,11 +2,11 @@
 
 import { useEffect, useState } from "react"
 import Link from "next/link"
+import Image from "next/image"
 
 const sections = [
   { label: "Inicio", id: "home" },
   { label: "Servicios", id: "servicios" },
-  { label: "Proyectos", id: "proyectos" },
   { label: "Nosotros", id: "nosotros" },
 ]
 
@@ -56,11 +56,19 @@ export default function Navbar() {
         "
       >
         {/* Logo */}
-        <Link
-          href="/"
-          className="font-semibold text-sm md:text-base text-zinc-900"
-        >
-          BBM Solutions | Desarrollo de software a la medida
+        <Link href="/" className="flex items-center gap-3">
+          <Image
+            src="/logo.png"
+            alt="BBM Solutions Logo"
+            width={33}
+            height={33}
+            priority
+            className="object-contain"
+          />
+
+          <span className="hidden sm:block font-semibold text-sm md:text-base text-zinc-900">
+            | Soluciones de software a la medida.
+          </span>
         </Link>
 
         {/* Links */}
@@ -96,7 +104,7 @@ export default function Navbar() {
           {/* CTA */}
           <button
             onClick={() => scrollTo("contacto")}
-            className={`
+            className="
               relative
               ml-2
               px-4 py-2
@@ -106,7 +114,7 @@ export default function Navbar() {
               transition-all
               cursor-pointer
               hover:bg-zinc-800
-            `}
+            "
           >
             <span className="relative z-10">Contáctanos</span>
 

@@ -5,14 +5,16 @@ type HeroBackground =
   | "glow"
   | "noise"
 
-const HERO_BG: HeroBackground = "tech" 
+const HERO_BG: HeroBackground = "tech"
 
 export default function Home() {
   return (
-    <section 
+    <section
       id="home"
-      className={`relative min-h-screen flex items-center px-6 text-white ${getHeroBg(HERO_BG)}`}>
-      
+      className={`relative min-h-screen flex items-center px-6 text-white ${getHeroBg(
+        HERO_BG
+      )}`}
+    >
       {/* Overlays especiales */}
       {HERO_BG === "noise" && (
         <div
@@ -33,28 +35,52 @@ export default function Home() {
 
       {/* Contenido */}
       <div className="relative z-10 max-w-7xl mx-auto w-full">
-        <h1 className="text-5xl md:text-6xl font-bold leading-tight max-w-4xl">
-          Construimos software que impulsa negocios reales
-        </h1>
-
-        <p className="mt-6 text-lg text-white/70 max-w-2xl">
-          En BBM desarrollamos soluciones digitales modernas,
-          escalables y enfocadas en resultados.
+        {/* Eyebrow */}
+        <p className="mb-4 text-sm uppercase tracking-wide text-white/50">
+          Soluciones de software a la medida
         </p>
 
-        <div className="mt-10 flex gap-4">
+        {/* Headline */}
+        <h1 className="text-5xl md:text-6xl font-bold leading-tight max-w-4xl">
+          Construimos el núcleo
+          <br />
+          <span className="text-white/80">digital de tu empresa.</span>
+        </h1>
+
+        {/* Subheadline */}
+        <p className="mt-6 text-lg text-white/70 max-w-2xl">
+          Diseñamos y desarrollamos tecnologías que resuelven problemas
+          de operación, crecimiento y control empresarial.
+        </p>
+
+        {/* CTAs */}
+        <div className="mt-10 flex flex-wrap items-center gap-4">
           <a
-            href="/contacto"
-            className="px-6 py-3 rounded-xl bg-white text-black font-medium"
+            href="/#contacto"
+            className="
+              px-6 py-3
+              rounded-xl
+              bg-white
+              text-black
+              font-medium
+              transition
+              hover:bg-white/90
+            "
           >
             Contáctanos
           </a>
 
           <a
             href="/#servicios"
-            className="px-6 py-3 rounded-xl border border-white/50"
+            className="
+              px-6 py-3
+              rounded-xl
+              text-white/80
+              hover:text-white
+              transition
+            "
           >
-            Nuestros servicios
+            Ver servicios →
           </a>
         </div>
       </div>
@@ -68,15 +94,15 @@ export default function Home() {
 
 function getHeroBg(type: HeroBackground) {
   switch (type) {
-    // Negro sólido (baseline)
+    // Negro sólido
     case "solid":
       return "bg-black"
 
-    // 🥇 Apple / Stripe (recomendado)
+    // Estilo Apple / Stripe
     case "liquid":
       return "bg-[radial-gradient(ellipse_at_top,_#1a1a1a,_#000)]"
 
-    // 🥈 SaaS tecnológico
+    // SaaS / Tech (recomendado para BBM)
     case "tech":
       return "bg-[radial-gradient(ellipse_at_top,_#111827,_#000)]"
 
