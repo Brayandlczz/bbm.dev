@@ -1,5 +1,6 @@
-import Link from "next/link"
-import { Instagram, Facebook, Github } from "lucide-react"
+import Link from "next/link";
+import { Instagram, Facebook, Github, MessageCircle } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -15,7 +16,7 @@ export default function Footer() {
       >
         {/* Izquierda — Horarios */}
         <div className="text-sm text-white text-center md:text-left">
-          <p className="font-medium text-white">Horarios y días de atención:</p>
+          <p className="font-medium">Horarios y días de atención:</p>
           <p className="mt-2">Lunes – Viernes: 10 a.m - 5 p.m.</p>
         </div>
 
@@ -29,7 +30,7 @@ export default function Footer() {
               Términos y Condiciones
             </Link>
 
-            <span className="hidden md:inline text-white">•</span>
+            <span className="hidden md:inline">•</span>
 
             <Link
               href="/politicas-de-privacidad"
@@ -39,7 +40,7 @@ export default function Footer() {
             </Link>
           </div>
 
-          <p className="mt-3 text-white">
+          <p className="mt-3">
             © {new Date().getFullYear()} BBM MÉXICO | Soluciones de software a la medida.
           </p>
         </div>
@@ -55,7 +56,7 @@ export default function Footer() {
               href="https://instagram.com"
               target="_blank"
               aria-label="Instagram"
-              className="hover:text-white transition-colors"
+              className="transition-all hover:text-pink-500 hover:scale-110"
             >
               <Instagram size={18} />
             </Link>
@@ -64,22 +65,31 @@ export default function Footer() {
               href="https://facebook.com"
               target="_blank"
               aria-label="Facebook"
-              className="hover:text-white transition-colors"
+              className="transition-all hover:text-blue-500 hover:scale-110"
             >
               <Facebook size={18} />
             </Link>
 
             <Link
-              href="https://github.com"
+              href="https://github.com/BBM-Software-Solutions"
               target="_blank"
               aria-label="GitHub"
-              className="hover:text-white transition-colors"
+              className="transition-all hover:text-zinc-300 hover:scale-110"
             >
               <Github size={18} />
+            </Link>
+
+            <Link
+              href="https://wa.me/5219612405685"
+              target="_blank"
+              aria-label="WhatsApp"
+              className="transition-all hover:text-green-500 hover:scale-110"
+            >
+              <FaWhatsapp size={18} />
             </Link>
           </div>
         </div>
       </div>
     </footer>
-  )
+  );
 }
